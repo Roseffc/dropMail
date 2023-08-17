@@ -2,3 +2,86 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* You can add global styles to this file, and also import other style files */
+
+
+:root {
+  --color-primary: #4c1d95;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.font-family--poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content {
+  &-start {
+    justify-content: start;
+  }
+  &-end {
+    justify-content: end;
+  }
+  &-center {
+    justify-content: center;
+  }
+  &-around {
+    justify-content: space-around;
+  }
+  &-between {
+    justify-content: space-between;
+  }
+}
+.align-items {
+  &-start {
+    align-items: start;
+  }
+  &-end {
+    align-items: end;
+  }
+  &-center {
+    align-items: center;
+  }
+}
+
+.fs-12 {
+  font-size: 12px;
+}
+
+.fs-20 {
+  font-size: 20px;
+}
+
+.fs-32 {
+  font-size: 32px;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.container {
+  padding: 0 65px!important;
+  margin: 0 auto;
+}
