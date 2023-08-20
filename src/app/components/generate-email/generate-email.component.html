@@ -2,10 +2,10 @@
   <div class="d-flex generate__form justify-content-center">
     <mat-form-field class="generate__input" appearance="outline">
       <mat-label>Your temporary email address</mat-label>
-      <input matInput disabled [(ngModel)]="randomEmail">
+      <input matInput disabled [(ngModel)]="randomEmail.address">
     </mat-form-field>
-    <button class="generate__button" mat-raised-button color="primary">Generate email</button>
-    <button class="generate__button" mat-stroked-button color="primary" [cdkCopyToClipboard]="randomEmail">
+    <button class="generate__button" mat-raised-button color="primary" (click)="getRandomUmail()">Generate email</button>
+    <button class="generate__button" mat-stroked-button color="primary" [cdkCopyToClipboard]="randomEmail.address">
       <mat-icon md-12>content_copy</mat-icon>
       Copy
     </button>

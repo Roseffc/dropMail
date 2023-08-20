@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { DropmailService } from 'src/app/services/dropmail.service';
+import { Addresses } from 'src/app/services/dropmail.type';
 
 @Component({
   selector: 'app-generate-email',
@@ -7,11 +9,20 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./generate-email.component.scss']
 })
 export class GenerateEmailComponent implements OnInit {
-  randomEmail='rododod@ig.com'
+  randomEmail:Addresses={id:'', address:''};
 
-  constructor() { }
+  constructor(private dropmailService:DropmailService) { }
 
   ngOnInit() {
+  }
+
+  getRandomUmail() {
+    this.dropmailService.randomEmail().subscribe((result)=>{
+      const {data:{introduceSession}} = result;
+      this.randomEmail= introduceSession.addresses[0]
+      this.randomEmail.address
+  });
+
   }
 
 }
