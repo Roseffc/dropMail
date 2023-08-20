@@ -1,3 +1,25 @@
-<p>
-  generate-email works!
-</p>
+<div class="generate">
+  <div class="d-flex generate__form justify-content-center">
+    <mat-form-field class="generate__input" appearance="outline">
+      <mat-label>Your temporary email address</mat-label>
+      <input matInput disabled [(ngModel)]="randomEmail">
+    </mat-form-field>
+    <button class="generate__button" mat-raised-button color="primary">Generate email</button>
+    <button class="generate__button" mat-stroked-button color="primary" [cdkCopyToClipboard]="randomEmail">
+      <mat-icon md-12>content_copy</mat-icon>
+      Copy
+    </button>
+  </div>
+  <div class="d-flex justify-content-center mt-15">
+    <div class="d-flex mr-15">
+      Autorefresh in
+      <div class="circle-seconds d-flex justify-content-center align-items-center">
+        1
+      </div>
+    </div>
+    <span class="d-flex">
+      <mat-icon md-12>autorenew</mat-icon>
+      Refresh
+    </span>
+  </div>
+</div>

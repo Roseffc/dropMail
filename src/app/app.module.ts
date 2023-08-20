@@ -10,7 +10,11 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { HomeComponent } from './pages/home/home.component';
 import { GenerateEmailComponent } from './components/generate-email/generate-email.component';
 import { EmailListComponent } from './components/email-list/email-list.component';
-
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatIconModule} from '@angular/material/icon';
+import {ClipboardModule} from '@angular/cdk/clipboard';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,6 @@ import { EmailListComponent } from './components/email-list/email-list.component
     GenerateEmailComponent,
     MessageComponent,
     EmailListComponent
-
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,11 @@ import { EmailListComponent } from './components/email-list/email-list.component
     BrowserAnimationsModule,
     MatButtonModule,
     MatToolbarModule,
-    
+    MatInputModule,
+    MatFormFieldModule,
+    MatIconModule,
+    ClipboardModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
