@@ -1,0 +1,7 @@
+{
+  "/api": {
+    "target": "https://dropmail.me",
+    "secure": false,
+    "changeOrigin": true
+  }
+}
