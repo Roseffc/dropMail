@@ -1,5 +1,5 @@
 .generate {
-  padding: 60px 0;
+  padding: 26px 0;
   min-height: 120px;
 
   &__input {
@@ -10,6 +10,10 @@
   &__button {
     margin-left: 30px;
 
+    @media ( max-width: 500px ) {
+      margin: 0;
+      margin-right: 30px;
+    }
   }
 
   &__form {

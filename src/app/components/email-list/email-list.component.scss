@@ -1,0 +1,15 @@
+.boxEmail {
+  border: solid 1px #dedede;
+
+}
+
+.listEmail {
+  list-style: none;
+  padding: 10px;
+
+  &__item {
+    border-bottom: solid 1px #dedede;
+    padding: 10px 0;
+  }
+
+}

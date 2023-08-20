@@ -7,7 +7,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 
 :root {
-  --color-primary: #4c1d95;
+  --color-primary: #673ab7;
+  --color-secondary: #d7c3f9;
 }
 
 body {
@@ -23,9 +24,20 @@ body {
 .bg-primary {
   background-color: var(--color-primary);
 }
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+
+.text-white {
+  color: #ffff;
+}
 
 .d-flex {
   display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .justify-content {
@@ -164,5 +176,47 @@ body {
 
   &-15 {
     margin-bottom: 15px;
+  }
+}
+
+.p {
+  &-10 {
+    padding: 10px;
+  }
+}
+
+.p {
+  padding: 0;
+}
+
+.p {
+  &-15 {
+    padding: 15px;
+  }
+}
+
+.p {
+  &-20 {
+    padding: 20px;
+  }
+}
+
+.m {
+  margin: 0;
+}
+
+.m {
+  &-10 {
+    margin: 10px;
+  }
+}
+.m {
+  &-15 {
+    margin: 15px;
+  }
+}
+.m {
+  &-20 {
+    margin: 20px;
   }
 }

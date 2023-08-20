@@ -1,3 +1,11 @@
-<p>
-  email-list works!
-</p>
+<div class="boxEmail">
+  <div class="boxEmail__header bg-primary p-10">
+    <h2 class="text-white">Inbox</h2>
+  </div>
+  <ul  class="listEmail">
+    <li class="listEmail__item" *ngFor="let item of listEmail">
+      <span class="fw-bold">{{item.headerSubject}}</span>
+      <p>{{item.text.slice(1,50)+'...'}}</p>
+    </li>
+  </ul>
+</div>

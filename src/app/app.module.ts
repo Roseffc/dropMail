@@ -15,6 +15,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import {ClipboardModule} from '@angular/cdk/clipboard';
 import { FormsModule } from '@angular/forms';
+import {MatDividerModule} from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { FormsModule } from '@angular/forms';
     MatFormFieldModule,
     MatIconModule,
     ClipboardModule,
-    FormsModule
+    FormsModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
