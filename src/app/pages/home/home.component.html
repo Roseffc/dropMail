@@ -1,10 +1,10 @@
 <section class="container">
   <div>
-    <app-generate-email></app-generate-email>
+    <app-generate-email (statusEmail)="getEmail()" (refresh$)="handleRefresh($event)"></app-generate-email>
   </div>
   <mat-divider></mat-divider>
   <div class="d-flex flex-wrap">
-    <app-email-list></app-email-list>
+    <app-email-list [listEmails]="emails"></app-email-list>
     <app-message></app-message>
   </div>
 </section>

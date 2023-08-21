@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit } from '@angular/core';
+import { DropmailService } from 'src/app/services/dropmail.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  emails:any = [];
+
+  constructor(private dropmailService:DropmailService) { }
 
   ngOnInit() {
+  }
+
+  getEmail() {
+    this.dropmailService.getEmail().subscribe((result)=> {
+      this.emails = result.data.session.mails;
+    });
+  }
+
+  handleRefresh(event:any) {
+    this.getEmail();
   }
 
 }

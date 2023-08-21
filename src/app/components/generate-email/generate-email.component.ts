@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { DropmailService } from 'src/app/services/dropmail.service';
 import { Addresses } from 'src/app/services/dropmail.type';
 
@@ -10,6 +9,8 @@ import { Addresses } from 'src/app/services/dropmail.type';
 })
 export class GenerateEmailComponent implements OnInit {
   randomEmail:Addresses={id:'', address:''};
+  @Output() statusEmail = new EventEmitter();
+  @Output() refresh$= new EventEmitter();
 
   constructor(private dropmailService:DropmailService) { }
 
@@ -20,9 +21,12 @@ export class GenerateEmailComponent implements OnInit {
     this.dropmailService.randomEmail().subscribe((result)=>{
       const {data:{introduceSession}} = result;
       this.randomEmail= introduceSession.addresses[0]
-      this.randomEmail.address
-  });
+      this.statusEmail.emit(this.randomEmail);
+    });
+  }
 
+  handleRefresh() {
+    this.refresh$.emit(true);
   }
 
 }
