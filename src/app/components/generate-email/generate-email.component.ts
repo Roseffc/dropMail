@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { DropmailService } from 'src/app/services/dropmail.service';
 import { Addresses } from 'src/app/services/dropmail.type';
 
@@ -11,6 +11,7 @@ export class GenerateEmailComponent implements OnInit {
   randomEmail:Addresses={id:'', address:''};
   @Output() statusEmail = new EventEmitter();
   @Output() refresh$= new EventEmitter();
+  @Input() counterTime = 0;
 
   constructor(private dropmailService:DropmailService) { }
 

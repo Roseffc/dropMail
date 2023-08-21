@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { EmailsBodyType } from 'src/app/services/dropmail.type';
 
 @Component({
@@ -9,11 +9,17 @@ import { EmailsBodyType } from 'src/app/services/dropmail.type';
 export class EmailListComponent implements OnInit {
 
  @Input() listEmails:EmailsBodyType[]=[];
+ @Output() viewEmail$= new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
-    
+
   }
+
+  handleViewEmail(email:EmailsBodyType) {
+    this.viewEmail$.emit(email)
+  }
+
 
 }

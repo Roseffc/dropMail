@@ -3,7 +3,7 @@
     <h2 class="text-white">Inbox</h2>
   </div>
   <ul  class="listEmail">
-    <li class="listEmail__item" *ngFor="let item of listEmails">
+    <li class="listEmail__item" *ngFor="let item of listEmails" (click)="handleViewEmail(item)">
       <span class="fw-bold">{{item.headerSubject}}</span>
       <p>{{item.text.slice(1,50)+'...'}}</p>
     </li>
