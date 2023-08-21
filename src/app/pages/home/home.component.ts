@@ -41,7 +41,7 @@ export class HomeComponent implements OnInit {
     this.subscriptionTimer = interval(1000).subscribe(() => {
       this.counterTime++;
       console.log(this.counterTime)
-      if (this.counterTime === 5) {
+      if (this.counterTime === 15) {
         this.counterTime = 0;
         this.getEmail();
       }

@@ -1,3 +1,32 @@
+# DropMail
+
+### Tecnologias utilizadas 
+- Angular@13.2
+- Angular Material
+
+### Rodar projeto 
+
+Para rodar o projeto em localhost, seguir os passos abaixo:
+
+1. `npm install`
+2. `npm start`
+
+### Testar as funcionalidades
+1. Abrir o browser com esse link http://localhost:4200
+2. Clicar no botão `Generate email`
+3. Enviar um email para o email gerado e aguardar 5seg ou clicar no botão `Refresh`
+
+### Interfaces
+
+![Desktop](src/assets/dropmail_interface.png)
+
+
+### Referências:
+
+- [Angular CLI Overview and Command Reference](https://angular.io/cli)
+
+
+
 # DropMail.me Challenge
 
 ## Introdução
